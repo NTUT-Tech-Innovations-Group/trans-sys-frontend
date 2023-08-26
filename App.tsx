@@ -1,22 +1,41 @@
 import { LinearGradient } from "expo-linear-gradient";
-import { useState } from "react";
-import { StyleSheet, Image, View, SafeAreaView, Text } from "react-native";
+import {
+  StyleSheet,
+  View,
+  SafeAreaView,
+  Text,
+  ImageBackground,
+} from "react-native";
 
 export default function App() {
-  const [text, setText] = useState<string>("");
   return (
     <SafeAreaView style={styles.container}>
-      <Image style={styles.image} source={require("./assets/home.jpg")} />
+      <ImageBackground
+        source={require("./assets/home.jpeg")}
+        imageStyle={{ backgroundColor: "lightgray" }}
+        style={styles.image}
+      />
       <LinearGradient
         style={styles.mask}
-        locations={[0.8, 0.4]}
+        locations={[0.69, 0.2]}
         colors={["white", "transparent"]}
+      />
+      <View
+        style={{
+          zIndex: 2,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
       >
-        <Text>Hello</Text>
-      </LinearGradient>
-      {/* <View style={styles.fadeContainer}>
-        <Text>Hello</Text>
-      </View> */}
+        <View style={styles.headerContainer}>
+          <Text style={styles.headerContainer.sub}> 發現全新移動方式 </Text>
+          <Text style={styles.headerContainer.main}>Transportation GO !</Text>
+        </View>
+        <View style={styles.buttonContainer}>
+          <Text style={styles.buttonTitle}>Let's Go {" ->"}</Text>
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
@@ -28,30 +47,61 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
+    resizeMode: "contain",
     width: 435,
     height: 653,
     zIndex: 0,
   },
-  header: {
-    top: -35,
-    fontSize: 16,
-    letterSpacing: 5,
+
+  headerContainer: {
+    sub: {
+      fontSize: 16,
+      letterSpacing: 5.04,
+    },
+
+    main: {
+      fontSize: 30,
+      color: "#0F4330",
+      letterSpacing: 1.5,
+      textShadowColor: "rgba(0, 0, 0, 0.25)",
+      textShadowOffset: { width: 2, height: 3 },
+      textShadowRadius: 4,
+    },
+
+    display: "flex",
+    gap: 5,
+    justifyContent: "center",
+    alignItems: "center",
+    top: -65,
+    backgroundColor: "transparent",
+    zIndex: 2,
   },
+
+  buttonContainer: {
+    zIndex: 2,
+    backgroundColor: "#89B449",
+    paddingHorizontal: 35,
+    paddingVertical: 20,
+    borderRadius: 56,
+    shadowColor: "black",
+    shadowOpacity: 0.4,
+    shadowOffset: { width: 0, height: 6 },
+    shadowRadius: 16,
+  },
+
+  buttonTitle: {
+    color: "white",
+    fontSize: 26,
+    fontWeight: "700",
+    textTransform: "uppercase",
+    letterSpacing: 1.3,
+  },
+
   mask: {
     position: "absolute",
     zIndex: 1,
     width: "100%",
-    height: 620,
+    height: 710,
     top: 224,
-  },
-  fadeContainer: {
-    zIndex: 10,
-    backgroundColor: "white",
-    shadowColor: "grey",
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 1,
-    shadowRadius: 40,
-    width: "100%",
-    height: 100,
   },
 });
