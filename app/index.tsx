@@ -11,13 +11,13 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground
-        source={require("./assets/home.jpeg")}
+        source={require("../assets/home.jpeg")}
         imageStyle={{ backgroundColor: "lightgray" }}
         style={styles.image}
       />
       <LinearGradient
         style={styles.mask}
-        locations={[0.69, 0.2]}
+        locations={[0.6, 0.2]}
         colors={["white", "transparent"]}
       />
       <View
