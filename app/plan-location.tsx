@@ -5,6 +5,7 @@ const PlanLocation = () => {
   return (
     <SafeAreaView>
       <Text>Hello</Text>
+      <Text>Test</Text>
     </SafeAreaView>
   );
 };
