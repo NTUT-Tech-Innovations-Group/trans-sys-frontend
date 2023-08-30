@@ -1,4 +1,5 @@
 import { LinearGradient } from "expo-linear-gradient";
+import { Link } from "expo-router";
 import {
   StyleSheet,
   View,
@@ -33,7 +34,9 @@ export default function App() {
           <Text style={styles.headerContainer.main}>Transportation GO !</Text>
         </View>
         <View style={styles.buttonContainer}>
-          <Text style={styles.buttonTitle}>Let's Go {" ->"}</Text>
+          <Link href={"/plan-location"} style={styles.buttonTitle}>
+            Let's Go {" ->"}
+          </Link>
         </View>
       </View>
     </SafeAreaView>
