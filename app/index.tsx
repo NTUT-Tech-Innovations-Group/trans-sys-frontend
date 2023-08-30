@@ -17,7 +17,7 @@ export default function App() {
       />
       <LinearGradient
         style={styles.mask}
-        locations={[0.6, 0.2]}
+        locations={[0.61, 0.2]}
         colors={["white", "transparent"]}
       />
       <View
