@@ -3,6 +3,7 @@ import React from "react";
 import { style } from "./plan.style";
 import { SafeAreaView, Text, View } from "react-native";
 import { useFonts } from "expo-font";
+import Container from "../../components/container";
 
 const PlanLocation = () => {
   const [fontsLoaded] = useFonts({
@@ -18,13 +19,16 @@ const PlanLocation = () => {
       <Stack.Screen
         options={{
           headerBackTitleVisible: true,
-          headerShadowVisible: true,
           headerTintColor: "#666",
         }}
       />
       <View style={style.header}>
         <Text style={style.mainHeader}>設定起點與目的地</Text>
         <Text style={style.subHeader}>Select departure and destination</Text>
+      </View>
+      <View style={style.inputContainer}>
+        <Container />
+        <Container />
       </View>
     </SafeAreaView>
   );

@@ -6,10 +6,12 @@ export const style = StyleSheet.create({
     height: "100%",
     backgroundColor: "#F9F3DC",
   },
+
   header: {
-    marginTop: 50,
+    marginVertical: 50,
     marginLeft: 40,
   },
+
   mainHeader: {
     color: "#666",
     fontFamily: "Inter-Bold",
@@ -17,11 +19,21 @@ export const style = StyleSheet.create({
     fontWeight: "600",
     letterSpacing: 3.6,
   },
+
   subHeader: {
     color: "#818181",
     fontFamily: "Inter-Bold",
     fontSize: 13,
     lineHeight: 21,
     letterSpacing: 1.95,
+  },
+
+  inputContainer: {
+    height: 450,
+    width: "100%",
+    display: "flex",
+    gap: 60,
+    alignItems: "center",
+    backgroundColor: "white",
   },
 });
