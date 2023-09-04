@@ -30,6 +30,11 @@ const PlanLocation = () => {
         <Container />
         <Container />
       </View>
+      <View style={style.btnContainer}>
+        <View style={style.btn}>
+          <Text style={style.btnTitle}> 規劃 </Text>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };

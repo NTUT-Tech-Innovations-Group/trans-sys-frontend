@@ -6,8 +6,10 @@ const Container = () => {
     <View style={style.main}>
       <View style={style.inputContainer}>
         <TextInput style={style.input} />
+        <Text style={style.location}>使用目前定位</Text>
+        <View style={style.bottomContainer} />
       </View>
-      <Text style={style.location}>使用目前定位</Text>
+      <View style={style.shadowBox}></View>
     </View>
   );
 };

@@ -34,6 +34,28 @@ export const style = StyleSheet.create({
     display: "flex",
     gap: 60,
     alignItems: "center",
-    backgroundColor: "white",
+  },
+  btnContainer: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  btn: {
+    width: 170,
+    height: 55,
+    borderRadius: 30,
+    backgroundColor: "#89B449",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  btnTitle: {
+    fontSize: 26,
+    letterSpacing: 6.63,
+    fontWeight: "700",
+    color: "#fff",
   },
 });
