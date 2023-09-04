@@ -51,7 +51,7 @@ export default function Home() {
         </View>
         <View style={styles.buttonContainer}>
           <Link href={"/plan-location"} style={styles.buttonTitle}>
-            Let's Go {" ->"}
+            Let's Go
           </Link>
         </View>
       </View>

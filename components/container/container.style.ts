@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const style = StyleSheet.create({
   main: {
+    zIndex: 2,
     overflow: "hidden",
     backgroundColor: "#fff",
     width: 312,
