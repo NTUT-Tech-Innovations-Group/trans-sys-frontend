@@ -1,14 +1,16 @@
 import { Stack } from "expo-router";
 import React from "react";
 import { style } from "./plan.style";
-import { SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, Text, View, Image } from "react-native";
 import { useFonts } from "expo-font";
 import Container from "../../components/container";
-import Tab from "../../assets/icons/i-phone-13-rectangle-8.svg";
+import Question from "../../assets/icons/question.svg";
+import DownArrow from "../../assets/icons/down-arrow.svg";
 
 const PlanLocation = () => {
   const [fontsLoaded] = useFonts({
-    "Inter-Bold": require("../../assets/fonts/Inter-Bold.ttf"),
+    "Inter-700": require("../../assets/fonts/Inter-700.ttf"),
+    "Inter-500": require("../../assets/fonts/Inter-500.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -21,6 +23,7 @@ const PlanLocation = () => {
         options={{
           headerBackTitleVisible: true,
           headerTintColor: "#666",
+          headerRight: () => <Question />,
         }}
       />
       <View style={style.header}>
@@ -28,15 +31,19 @@ const PlanLocation = () => {
         <Text style={style.subHeader}>Select departure and destination</Text>
       </View>
       <View style={style.inputContainer}>
-        <View style={{ position: "absolute", right: 90, top: -33, zIndex: 1 }}>
-          <Tab />
+        <Container
+          tabStyle={{ position: "absolute", right: 30, top: -30, zIndex: 4 }}
+          text={"出發點"}
+          isImage={true}
+        />
+        <View style={{ left: 80, marginBottom: 14 }}>
+          <DownArrow />
         </View>
-
-        <Container />
-        <View style={{ position: "absolute", top: 180, left: 90, zIndex: 1 }}>
-          <Tab />
-        </View>
-        <Container />
+        <Container
+          tabStyle={{ position: "absolute", left: 30, top: -30, zIndex: 4 }}
+          text={"目的地"}
+          isImage={false}
+        />
       </View>
       <View style={style.btnContainer}>
         <View style={style.btn}>

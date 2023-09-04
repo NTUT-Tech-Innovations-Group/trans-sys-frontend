@@ -8,12 +8,13 @@ import {
   Text,
   ImageBackground,
 } from "react-native";
+import RightArrow from "../assets/icons/right-arrow.svg";
 
 export default function Home() {
   const [fontsLoaded] = useFonts({
     "Buenard-Regular": require("../assets/fonts/Buenard-Regular.ttf"),
     "ABeeZee-Regular": require("../assets/fonts/ABeeZee-Regular.ttf"),
-    "Inter-Bold": require("../assets/fonts/Inter-Bold.ttf"),
+    "Inter-700": require("../assets/fonts/Inter-700.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -50,8 +51,11 @@ export default function Home() {
           <Text style={styles.headerContainer.main}>Transportation GO !</Text>
         </View>
         <View style={styles.buttonContainer}>
-          <Link href={"/plan-location"} style={styles.buttonTitle}>
-            Let's Go
+          <Link href={"/plan-location"}>
+            <View style={styles.btn}>
+              <Text style={styles.btnTitle}>Let's go</Text>
+              <RightArrow />
+            </View>
           </Link>
         </View>
       </View>
@@ -110,13 +114,20 @@ const styles = StyleSheet.create({
     shadowRadius: 16,
   },
 
-  buttonTitle: {
-    color: "white",
+  btn: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 15,
+    justifyContent: "center",
+  },
+
+  btnTitle: {
     fontSize: 26,
-    fontWeight: "700",
-    textTransform: "uppercase",
-    fontFamily: "Inter-Bold",
+    fontFamily: "Inter-700",
     letterSpacing: 1.3,
+    color: "#fff",
+    textTransform: "uppercase",
   },
 
   mask: {

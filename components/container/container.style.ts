@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const style = StyleSheet.create({
   main: {
-    zIndex: 2,
+    zIndex: 4,
     overflow: "hidden",
     backgroundColor: "#fff",
     width: 312,
@@ -11,6 +11,7 @@ export const style = StyleSheet.create({
     display: "flex",
     alignItems: "center",
   },
+
   shadowBox: {
     position: "absolute",
     width: "100%",
@@ -24,6 +25,17 @@ export const style = StyleSheet.create({
     shadowRadius: 3,
   },
 
+  tabText: {
+    position: "absolute",
+    color: "#89B449",
+    fontFamily: "Inter-500",
+    zIndex: 5,
+    left: 40,
+    top: 2,
+    fontSize: 20,
+    letterSpacing: 4.6,
+  },
+
   inputContainer: {
     width: "100%",
     shadowOpacity: 0,
@@ -31,14 +43,22 @@ export const style = StyleSheet.create({
 
   input: {
     backgroundColor: "#ECECEC",
+    display: "flex",
+    flexDirection: "row",
+    gap: 7,
+    overflow: "hidden",
     marginHorizontal: 19,
     marginTop: 35,
     borderRadius: 30,
     padding: 10,
     shadowColor: "transparent",
   },
+
   location: {
-    textAlign: "center",
+    display: "flex",
+    flexDirection: "row",
+    gap: 6,
+    justifyContent: "center",
     paddingVertical: 13,
     color: "#666",
     fontSize: 14,
