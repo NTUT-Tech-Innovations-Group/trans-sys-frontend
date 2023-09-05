@@ -10,6 +10,7 @@ export const style = StyleSheet.create({
     borderRadius: 30,
     display: "flex",
     alignItems: "center",
+    // justifyContent:"space-around",
   },
   shadowBox: {
     position: "absolute",
@@ -25,9 +26,13 @@ export const style = StyleSheet.create({
   },
 
   inineraryContainer: {
-    padding: 10,
-    flexDirection:"column",
-    width: "100%",
+    paddingTop: 20,
+    paddingBottom: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+    width: "90%",
+    height: "60%",
     shadowOpacity: 0,
   },
 

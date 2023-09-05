@@ -9,8 +9,15 @@ export const style = StyleSheet.create({
   },
 
   header: {
-    marginVertical: 50,
+    marginTop: 50,
+    marginBottom:20,
     marginLeft: 40,
+  },
+  route_list: {
+    height:"65%",
+    marginLeft: 40,
+    justifyContent:"space-between"
+    
   },
 
   mainHeader: {
