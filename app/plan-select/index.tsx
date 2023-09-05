@@ -1,9 +1,9 @@
-import { Link, Stack } from "expo-router";
+import { Stack } from "expo-router";
 import React from "react";
 import { style } from "./plan.style";
 import { SafeAreaView, Text, View } from "react-native";
 import { useFonts } from "expo-font";
-import Container from "../../components/container";
+import Container from "../../components/ininerary-container";
 import Tab from "../../assets/icons/i-phone-13-rectangle-8.svg";
 
 const PlanLocation = () => {
@@ -24,25 +24,19 @@ const PlanLocation = () => {
         }}
       />
       <View style={style.header}>
-        <Text style={style.mainHeader}>設定起點與目的地</Text>
-        <Text style={style.subHeader}>Select departure and destination</Text>
+        <Text style={style.mainHeader}>選擇路線方案</Text>
+        <Text style={style.subHeader}>Select your preferred itinerary</Text>
       </View>
-      <View style={style.inputContainer}>
-        <View style={{ position: "absolute", right: 90, top: -33, zIndex: 1 }}>
-          <Tab />
-        </View>
+      <View style={style.header}>
+        <Container path={["TRA", "MRT", "Walk"]} description={"轉乘次數少"} times={38} />
+      </View>
 
-        <Container />
-        <View style={{ position: "absolute", top: 180, left: 90, zIndex: 1 }}>
-          <Tab />
-        </View>
-        <Container />
-      </View>
+
       <View style={style.btnContainer}>
         <View style={style.btn}>
-          <Link href={"/plan-select"} onPress={() => console.log("hello")} style={style.btnTitle}>
-            規劃
-          </Link>
+          <Text onPress={() => console.log("hello")} style={style.btnTitle}>
+            下一步
+          </Text>
         </View>
       </View>
     </SafeAreaView>
