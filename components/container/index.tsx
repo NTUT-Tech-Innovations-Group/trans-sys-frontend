@@ -1,20 +1,20 @@
-import { View, Text, TextInput, Image } from "react-native";
-import { style } from "./container.style";
-import { useFonts } from "expo-font";
-import Tab from "../../assets/icons/i-phone-13-rectangle-8.svg";
-import Search from "../../assets/icons/search.svg";
+import { View, Text, TextInput, Image } from 'react-native'
+import { style } from './container.style'
+import { useFonts } from 'expo-font'
+import Tab from 'assets/icons/i-phone-13-rectangle-8.svg'
+import Search from 'assets/icons/search.svg'
 
 const Container = (data: {
-  tabStyle: object;
-  text: string;
-  isImage: boolean;
+  tabStyle: object
+  text: string
+  isImage: boolean
 }) => {
   const [fontsLoaded] = useFonts({
-    "Inter-500": require("../../assets/fonts/Inter-500.ttf"),
-  });
+    'Inter-500': require('assets/fonts/Inter-500.ttf'),
+  })
 
   if (!fontsLoaded) {
-    return null;
+    return null
   }
 
   return (
@@ -29,17 +29,17 @@ const Container = (data: {
             <Search />
             <TextInput
               style={{
-                width: "83%",
+                width: '83%',
               }}
             />
           </View>
           <View style={style.location}>
             {data.isImage && (
-              <Image source={require("../../assets/icons/location.png")} />
+              <Image source={require('assets/icons/location.png')} />
             )}
 
-            <Text style={{ fontFamily: "Inter-500" }}>
-              {data.isImage ? "使用目前定位" : ""}
+            <Text style={{ fontFamily: 'Inter-500' }}>
+              {data.isImage ? '使用目前定位' : ''}
             </Text>
           </View>
           <View style={style.bottomContainer} />
@@ -47,7 +47,7 @@ const Container = (data: {
         <View style={style.shadowBox}></View>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default Container;
+export default Container
