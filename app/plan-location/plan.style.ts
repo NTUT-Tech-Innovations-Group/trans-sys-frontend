@@ -5,17 +5,18 @@ export const style = StyleSheet.create({
     width: "100%",
     height: "100%",
     backgroundColor: "#F9F3DC",
-    zIndex: 0,
+    zIndex: 1,
   },
 
   header: {
-    marginVertical: 50,
+    marginTop: 40,
+    marginBottom: 80,
     marginLeft: 40,
   },
 
   mainHeader: {
     color: "#666",
-    fontFamily: "Inter-Bold",
+    fontFamily: "Inter-700",
     fontSize: 24,
     fontWeight: "600",
     letterSpacing: 3.6,
@@ -23,20 +24,20 @@ export const style = StyleSheet.create({
 
   subHeader: {
     color: "#818181",
-    fontFamily: "Inter-Bold",
+    fontFamily: "Inter-500",
     fontSize: 13,
     lineHeight: 21,
     letterSpacing: 1.95,
   },
 
   inputContainer: {
-    height: 450,
     width: "100%",
     display: "flex",
-    gap: 60,
     alignItems: "center",
   },
+
   btnContainer: {
+    marginTop: 43,
     width: "100%",
     display: "flex",
     justifyContent: "center",
@@ -56,7 +57,7 @@ export const style = StyleSheet.create({
   btnTitle: {
     fontSize: 26,
     letterSpacing: 6.63,
-    fontWeight: "700",
+    fontFamily: "Inter-700",
     color: "#fff",
   },
 });
