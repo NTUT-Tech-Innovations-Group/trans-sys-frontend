@@ -5,19 +5,21 @@ export const style = StyleSheet.create({
     width: "100%",
     height: "100%",
     backgroundColor: "#F9F3DC",
+    alignItems: "center",
     zIndex: 0,
   },
 
   header: {
+    width:"100%",
     marginTop: 50,
-    marginBottom:20,
-    marginLeft: 40,
+    marginBottom: 40,
+    marginLeft: 50,
   },
   route_list: {
-    height:"65%",
-    marginLeft: 40,
-    justifyContent:"space-between"
-    
+    height: "65%",
+
+    justifyContent: "space-between"
+
   },
 
   mainHeader: {
@@ -44,10 +46,10 @@ export const style = StyleSheet.create({
     alignItems: "center",
   },
   btnContainer: {
-    position:"absolute",
+    position: "absolute",
     width: "100%",
     display: "flex",
-    bottom:100,
+    bottom: 100,
     alignItems: "flex-end",
   },
 

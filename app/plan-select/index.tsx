@@ -26,6 +26,7 @@ const PlanLocation = () => {
         <Text style={style.mainHeader}>選擇路線方案</Text>
         <Text style={style.subHeader}>Select your preferred itinerary</Text>
       </View>
+      
       <View style={style.route_list}>
         <Container path={["TRA", "MRT", "WALK"]} description={"最快抵達"} minutes={38} />
         <Container path={["HSR", "WALK"]} description={"轉乘次數少"} minutes={40} />
