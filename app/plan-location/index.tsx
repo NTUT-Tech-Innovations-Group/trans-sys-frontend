@@ -1,4 +1,4 @@
-import { Stack } from 'expo-router'
+import { Stack, Link } from 'expo-router'
 import React from 'react'
 import { style } from './plan.style'
 import { SafeAreaView, Text, View } from 'react-native'
@@ -47,9 +47,13 @@ const PlanLocation = () => {
       </View>
       <View style={style.btnContainer}>
         <View style={style.btn}>
-          <Text onPress={() => console.log('hello')} style={style.btnTitle}>
+          <Link
+            href={'/plan-select'}
+            onPress={() => console.log('hello')}
+            style={style.btnTitle}
+          >
             規劃
-          </Text>
+          </Link>
         </View>
       </View>
     </SafeAreaView>
