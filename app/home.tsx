@@ -1,23 +1,24 @@
-import { LinearGradient } from "expo-linear-gradient";
-import { Link, Stack } from "expo-router";
-import { useFonts } from "expo-font";
+import { LinearGradient } from 'expo-linear-gradient'
+import { Link, Stack } from 'expo-router'
+import { useFonts } from 'expo-font'
 import {
   StyleSheet,
   View,
   SafeAreaView,
   Text,
   ImageBackground,
-} from "react-native";
+} from 'react-native'
+import RightArrow from 'assets/icons/right-arrow.svg'
 
 export default function Home() {
   const [fontsLoaded] = useFonts({
-    "Buenard-Regular": require("../assets/fonts/Buenard-Regular.ttf"),
-    "ABeeZee-Regular": require("../assets/fonts/ABeeZee-Regular.ttf"),
-    "Inter-Bold": require("../assets/fonts/Inter-Bold.ttf"),
-  });
+    'Buenard-Regular': require('assets/fonts/Buenard-Regular.ttf'),
+    'ABeeZee-Regular': require('assets/fonts/ABeeZee-Regular.ttf'),
+    'Inter-700': require('assets/fonts/Inter-700.ttf'),
+  })
 
   if (!fontsLoaded) {
-    return null;
+    return null
   }
 
   return (
@@ -28,21 +29,21 @@ export default function Home() {
         }}
       />
       <ImageBackground
-        source={require("../assets/home.jpeg")}
-        imageStyle={{ backgroundColor: "lightgray" }}
+        source={require('assets/home.jpeg')}
+        imageStyle={{ backgroundColor: 'lightgray' }}
         style={styles.image}
       />
       <LinearGradient
         style={styles.mask}
         locations={[0.69, 0.2]}
-        colors={["white", "transparent"]}
+        colors={['white', 'transparent']}
       />
       <View
         style={{
           zIndex: 2,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <View style={styles.headerContainer}>
@@ -50,23 +51,26 @@ export default function Home() {
           <Text style={styles.headerContainer.main}>Transportation GO !</Text>
         </View>
         <View style={styles.buttonContainer}>
-          <Link href={"/plan-location"} style={styles.buttonTitle}>
-            Let's Go
+          <Link href={'/plan-location'}>
+            <View style={styles.btn}>
+              <Text style={styles.btnTitle}>Let's go</Text>
+              <RightArrow />
+            </View>
           </Link>
         </View>
       </View>
     </SafeAreaView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "flex-start",
-    alignItems: "center",
+    justifyContent: 'flex-start',
+    alignItems: 'center',
   },
   image: {
-    resizeMode: "contain",
+    resizeMode: 'contain',
     width: 435,
     height: 653,
     zIndex: 0,
@@ -76,54 +80,61 @@ const styles = StyleSheet.create({
     sub: {
       fontSize: 16,
       letterSpacing: 5.04,
-      fontFamily: "ABeeZee-Regular",
+      fontFamily: 'ABeeZee-Regular',
     },
 
     main: {
       fontSize: 30,
-      color: "#0F4330",
+      color: '#0F4330',
       letterSpacing: 1.5,
-      textShadowColor: "rgba(0, 0, 0, 0.25)",
+      textShadowColor: 'rgba(0, 0, 0, 0.25)',
       textShadowOffset: { width: 2, height: 3 },
       textShadowRadius: 4,
-      fontFamily: "Buenard-Regular",
+      fontFamily: 'Buenard-Regular',
     },
 
-    display: "flex",
+    display: 'flex',
     gap: 5,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     top: -65,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     zIndex: 2,
   },
 
   buttonContainer: {
     zIndex: 2,
-    backgroundColor: "#89B449",
+    backgroundColor: '#89B449',
     paddingHorizontal: 35,
     paddingVertical: 20,
     borderRadius: 56,
-    shadowColor: "black",
+    shadowColor: 'black',
     shadowOpacity: 0.4,
     shadowOffset: { width: 0, height: 6 },
     shadowRadius: 16,
   },
 
-  buttonTitle: {
-    color: "white",
+  btn: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 15,
+    justifyContent: 'center',
+  },
+
+  btnTitle: {
     fontSize: 26,
-    fontWeight: "700",
-    textTransform: "uppercase",
-    fontFamily: "Inter-Bold",
+    fontFamily: 'Inter-700',
     letterSpacing: 1.3,
+    color: '#fff',
+    textTransform: 'uppercase',
   },
 
   mask: {
-    position: "absolute",
+    position: 'absolute',
     zIndex: 1,
-    width: "100%",
+    width: '100%',
     height: 710,
     top: 224,
   },
-});
+})
