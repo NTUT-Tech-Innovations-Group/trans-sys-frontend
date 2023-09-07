@@ -1,17 +1,19 @@
-import { Stack } from "expo-router";
-import React from "react";
-import { style } from "./plan.style";
-import { SafeAreaView, Text, View, Image } from "react-native";
-import { useFonts } from "expo-font";
-import Container from "../../components/itinerary-container";
+import { Stack } from 'expo-router'
+import React from 'react'
+import { style } from './plan.style'
+import { SafeAreaView, Text, View, Image } from 'react-native'
+import { useFonts } from 'expo-font'
+import Container from '../../components/itinerary-container'
 
 const PlanLocation = () => {
   const [fontsLoaded] = useFonts({
-    "Inter-Bold": require("../../assets/fonts/Inter-Bold.ttf"),
-  });
+    'Inter-500': require('assets/fonts/Inter-500.ttf'),
+    'Inter-600': require('assets/fonts/Inter-600.ttf'),
+    'Inter-700': require('assets/fonts/Inter-700.ttf'),
+  })
 
   if (!fontsLoaded) {
-    return null;
+    return null
   }
 
   return (
@@ -19,7 +21,7 @@ const PlanLocation = () => {
       <Stack.Screen
         options={{
           headerBackTitleVisible: true,
-          headerTintColor: "#666",
+          headerTintColor: '#666',
         }}
       />
       <View style={style.header}>
@@ -29,18 +31,18 @@ const PlanLocation = () => {
 
       <View style={style.route_list}>
         <Container
-          path={["TRA", "MRT", "WALK"]}
-          description={"最快抵達"}
+          path={['TRA', 'MRT', 'WALK']}
+          description={'最快抵達'}
           minutes={38}
         />
         <Container
-          path={["HSR", "WALK"]}
-          description={"轉乘次數少"}
+          path={['HSR', 'WALK']}
+          description={'轉乘次數少'}
           minutes={40}
         />
         <Container
-          path={["HSR", "MRT", "WALK"]}
-          description={"步行時間短"}
+          path={['HSR', 'MRT', 'WALK']}
+          description={'步行時間短'}
           minutes={38}
         />
       </View>
@@ -48,7 +50,7 @@ const PlanLocation = () => {
       <View style={style.btnContainer}>
         <View style={style.btn}>
           <Text
-            onPress={() => console.log("itinerary-selected")}
+            onPress={() => console.log('itinerary-selected')}
             style={style.btnTitle}
           >
             下一步
@@ -56,7 +58,7 @@ const PlanLocation = () => {
         </View>
       </View>
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default PlanLocation;
+export default PlanLocation

@@ -1,20 +1,26 @@
-import { View, Text, Image } from "react-native";
-import { style } from "./container.style";
-
-import Arrow from "../../assets/icons/arrow.svg";
+import { View, Text, Image } from 'react-native'
+import { style } from './container.style'
+import { useFonts } from 'expo-font'
+import Arrow from '../../assets/icons/arrow.svg'
 
 const images: { [key: string]: any } = {
-  TRA: require("../../assets/icons/TRA.png"),
-  HSR: require("../../assets/icons/HSR.png"),
-  WALK: require("../../assets/icons/WALK.png"),
-  MRT: require("../../assets/icons/MRT.png"),
-};
+  TRA: require('../../assets/icons/TRA.png'),
+  HSR: require('../../assets/icons/HSR.png'),
+  WALK: require('../../assets/icons/WALK.png'),
+  MRT: require('../../assets/icons/MRT.png'),
+}
 
 const Container = (data: {
-  path: string[];
-  description: string;
-  minutes: number;
+  path: string[]
+  description: string
+  minutes: number
 }) => {
+  const [fontsLoaded] = useFonts({
+    'Inter-500': require('assets/fonts/Inter-500.ttf'),
+    'Inter-600': require('assets/fonts/Inter-600.ttf'),
+    'Inter-700': require('assets/fonts/Inter-700.ttf'),
+  })
+
   return (
     <View style={style.main}>
       <View style={style.itineraryTop}>
@@ -32,7 +38,7 @@ const Container = (data: {
       </View>
       <View style={style.shadowBox}></View>
     </View>
-  );
-};
+  )
+}
 
-export default Container;
+export default Container
