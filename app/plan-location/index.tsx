@@ -40,7 +40,11 @@ const PlanLocation = () => {
       </View>
       <View style={style.btnContainer}>
         <View style={style.btn}>
-          <Link href={"/plan-select"} onPress={() => console.log("hello")} style={style.btnTitle}>
+          <Link
+            href={"/plan-select"}
+            onPress={() => console.log("hello")}
+            style={style.btnTitle}
+          >
             規劃
           </Link>
         </View>

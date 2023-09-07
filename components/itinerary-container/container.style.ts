@@ -10,7 +10,6 @@ export const style = StyleSheet.create({
     borderRadius: 30,
     display: "flex",
     alignItems: "center",
-    // justifyContent:"space-around",
   },
   shadowBox: {
     position: "absolute",
@@ -25,7 +24,7 @@ export const style = StyleSheet.create({
     shadowRadius: 3,
   },
 
-  inineraryContainer: {
+  itineraryTop: {
     paddingTop: 20,
     paddingBottom: 20,
     flexDirection: "row",
@@ -35,7 +34,31 @@ export const style = StyleSheet.create({
     height: "60%",
     shadowOpacity: 0,
   },
-
-
-
+  itineraryBottom: {
+    alignItems: "center",
+    borderRadius: 30,
+    backgroundColor: "#DBD469",
+    justifyContent: "space-around",
+    width: 285,
+    height: 35,
+    flexDirection: "row",
+    paddingHorizontal: 17,
+  },
+  description: {
+    fontFamily:"Inter-600",
+    fontSize: 20,
+    color: "white",
+    fontWeight: "600",
+  },
+  dot: {
+    color: "white",
+    letterSpacing: 3,
+    fontWeight: "600",
+  },
+  estimateMinutes: {
+    fontFamily:"Inter-700",
+    fontSize: 20,
+    color: "white",
+    fontWeight: "600",
+  },
 });

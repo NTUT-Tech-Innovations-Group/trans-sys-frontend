@@ -10,16 +10,14 @@ export const style = StyleSheet.create({
   },
 
   header: {
-    width:"100%",
+    width: "100%",
     marginTop: 50,
     marginBottom: 40,
     marginLeft: 50,
   },
   route_list: {
     height: "65%",
-
-    justifyContent: "space-between"
-
+    justifyContent: "space-between",
   },
 
   mainHeader: {
@@ -46,29 +44,31 @@ export const style = StyleSheet.create({
     alignItems: "center",
   },
   btnContainer: {
+    alignItems: "flex-end",
+    bottom: 100,
+    display: "flex",
     position: "absolute",
     width: "100%",
-    display: "flex",
-    bottom: 100,
-    alignItems: "flex-end",
   },
 
   btn: {
+    alignItems: "center",
+    backgroundColor: "#89B449",
+    display: "flex",
     width: 148,
     height: 40,
     borderRadius: 30,
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
+    justifyContent: "center",
     paddingTop: 9,
     paddingBottom: 9,
-    backgroundColor: "#89B449",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingLeft: 16,
   },
 
   btnTitle: {
-    fontSize: 16,
+    fontFamily:"Inter-500",
+    fontSize: 20,
     letterSpacing: 6.63,
     fontWeight: "500",
     color: "#fff",
